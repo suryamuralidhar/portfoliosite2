@@ -1,0 +1,130 @@
+/* ===== NAVBAR CONTAINER ===== */
+
+header.nav{
+text-align:center;
+padding:20px 10px;
+}
+
+/* ===== NAME ===== */
+
+header.nav h1{
+font-size:26px;
+font-weight:700;
+margin:5px 0;
+}
+
+header.nav p{
+font-size:14px;
+color:#666;
+margin:0 0 15px 0;
+}
+
+/* ===== DOT ===== */
+
+.logo .dot{
+height:8px;
+width:8px;
+background:#2e6b46;
+border-radius:50%;
+display:inline-block;
+margin-right:6px;
+}
+
+/* ===== NAV LINKS ===== */
+
+nav{
+display:flex;
+justify-content:center;
+flex-wrap:nowrap;
+gap:8px;
+}
+
+nav a{
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+flex:1;
+max-width:100px;
+padding:6px 10px;
+font-size:clamp(13px,3vw,15px);
+white-space:nowrap;
+text-decoration:none;
+background:#f3f3f3;
+border-radius:20px;
+}
+
+header.nav{
+text-align:center;
+}
+
+/* ===== HOVER EFFECT ===== */
+
+nav a:hover{
+transform:translateY(-1px);
+box-shadow:0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* ===== MOBILE ADJUSTMENT ===== */
+
+
+@media (max-width:370px){
+
+.nav{
+padding-left:20px;
+padding-right:20px;
+}
+
+nav{
+gap:6px;
+}
+
+}
+
+@media (max-width:370px){
+
+nav{
+gap:6px;
+}
+
+nav a{
+padding:6px 5px;
+font-size:13px;
+}
+
+}
+
+nav a{
+-webkit-tap-highlight-color: transparent; /* removes yellow flash */
+}
+
+nav a:active{
+background:#2e6b46;
+color:white;
+}
+
+.name{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:8px;
+}
+
+.dot{
+height:8px;
+width:8px;
+background:#ebebeb;
+border-radius:50%;
+position:absolute;
+left:-100px;
+top:25%;
+transform:translateY(-50%);
+}
+
+.dot{
+box-shadow:0 0 4px rgba(46,107,70,0.5);
+}
+header h1{
+position:relative;
+display:inline-block;
+}

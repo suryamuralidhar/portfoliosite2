@@ -1,0 +1,564 @@
+
+/* Disable text selection globally */
+
+*{
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+:root{
+
+--accent:#2e6b46;
+
+--card:#ffffff;
+
+--shadow:rgba(0,0,0,0.06);
+
+--hoverShadow:rgba(0,0,0,0.2);
+
+--boxText:#2b2b2b;
+
+--hoverText:#ffffff;
+
+}
+
+
+
+body{
+background:#ebebeb;
+color:#2b2b2b;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+
+
+/* MAIN CONTAINER */
+
+.about{
+max-width:1200px;
+margin:40px auto;
+padding:0 80px;
+position:relative;
+}
+
+
+
+/* INTRO */
+
+.about-intro{
+display:flex;
+gap:40px;
+align-items:center;
+margin-bottom:50px;
+}
+
+
+
+/* PROFILE IMAGE */
+
+.about-image img{
+
+width:280px;
+height:280px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+transition:.35s;
+
+box-shadow:0 20px 50px rgba(0,0,0,0.12);
+
+cursor:pointer;
+object-position:center 10%;
+}
+
+.about-image img:hover{
+
+transform:scale(1.08);
+
+box-shadow:0 35px 80px rgba(0,0,0,0.25);
+
+}
+
+
+
+/* TEXT */
+
+.about-text h1{
+font-size:42px;
+margin-bottom:25px;
+}
+
+.about-text p{
+line-height:1.8;
+margin-bottom:15px;
+color:#555;
+}
+
+
+
+/* PHILOSOPHY */
+
+
+.philosophy{
+margin-bottom:12px;
+}
+
+.philosophy h2{
+font-size:25px;
+margin-bottom:40px;
+}
+
+.philosophy-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+}
+
+
+
+.philosophy-card{
+
+background:var(--card);
+
+padding:30px;
+
+border-radius:8px;
+
+text-decoration:none;
+
+color:var(--boxText);
+
+transition:.35s;
+
+box-shadow:0 8px 25px var(--shadow);
+
+cursor:pointer;
+
+user-select:none;
+
+}
+
+.philosophy-card *{
+cursor:pointer;
+user-select:none;
+}
+
+.philosophy-card:hover{
+
+transform:scale(1.08);
+
+background:var(--accent);
+
+color:var(--hoverText);
+
+z-index:10;
+
+position:relative;
+
+box-shadow:0 35px 80px var(--hoverShadow);
+
+}
+
+
+
+/* TOOLS */
+
+.tools{
+margin-bottom:50px;
+}
+
+.tools h2{
+font-size:20;
+margin-bottom:40px;
+margin-top:40px;
+}
+
+.tools-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px;
+}
+
+.tool{
+
+background:var(--card);
+
+padding:14px;
+
+border-radius:8px;
+
+text-align:center;
+
+text-decoration:none;
+
+color:var(--boxText);
+
+transition:.35s;
+
+box-shadow:0 6px 18px var(--shadow);
+
+cursor:pointer;
+
+user-select:none;
+
+}
+
+.tool:hover{
+
+transform:scale(1.08);
+
+background:var(--accent);
+
+color:var(--hoverText);
+
+z-index:10;
+
+position:relative;
+
+box-shadow:0 35px 80px var(--hoverShadow);
+
+}
+
+
+
+/* PERSONAL */
+
+.personal{
+margin-bottom:50px;
+}
+
+.personal h2{
+margin-bottom:20px;
+}
+
+.personal p{
+line-height:1.8;
+color:#555;
+margin-bottom:15px;
+}
+
+
+
+/* HAM RADIO */
+
+.hamradio{
+margin-bottom:50px;
+}
+
+.hamradio h2{
+margin-bottom:20px;
+}
+
+.hamradio p{
+line-height:1.8;
+color:#555;
+margin-bottom:15px;
+}
+
+
+
+/* HAM BUTTONS */
+
+.ham-buttons{
+margin-top:30px;
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.ham-btn{
+
+background:var(--card);
+
+padding:12px 18px;
+
+border-radius:6px;
+
+text-decoration:none;
+
+color:var(--boxText);
+
+transition:.35s;
+
+box-shadow:0 4px 14px var(--shadow);
+
+cursor:pointer;
+
+user-select:none;
+
+}
+
+.ham-btn:hover{
+
+background:var(--accent);
+
+color:var(--hoverText);
+
+transform:scale(1.08);
+
+z-index:10;
+
+position:relative;
+
+box-shadow:0 35px 80px var(--hoverShadow);
+
+}
+
+
+
+/* SCREEN DIM EFFECT */
+
+.about::before{
+
+content:"";
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,0.25);
+
+opacity:0;
+
+pointer-events:none;
+
+transition:opacity .35s ease;
+
+z-index:5;
+
+}
+
+
+
+/* ACTIVATE DIM */
+
+.about:has(.philosophy-card:hover)::before,
+.about:has(.tool:hover)::before,
+.about:has(.ham-btn:hover)::before{
+
+opacity:0;
+
+}
+
+
+
+/* MOBILE */
+
+/* MOBILE */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:900px){
+
+/* reduce page padding */
+
+.about{
+padding:0 20px;
+}
+
+/* stack intro */
+
+.about-intro{
+flex-direction:column;
+text-align:center;
+margin-bottom:50px;   /* reduced from 120px */
+}
+
+/* smaller profile image */
+
+.about-image img{
+width:220px;
+height:220px;
+}
+
+/* tighter text spacing */
+
+.about-text h1{
+font-size:32px;
+margin-bottom:15px;
+}
+
+.about-text p{
+margin-bottom:10px;
+}
+
+/* PHILOSOPHY */
+
+.philosophy{
+margin-bottom:50px;   /* reduced */
+}
+
+.philosophy h2{
+margin-bottom:20px;
+}
+
+.philosophy-grid{
+grid-template-columns:1fr;
+gap:18px;
+}
+
+/* TOOLS */
+
+.tools{
+margin-bottom:50px;   /* reduced */
+}
+
+.tools h2{
+margin-bottom:20px;
+}
+
+.tools-grid{
+grid-template-columns:repeat(2,1fr);
+gap:12px;
+}
+
+/* PERSONAL */
+
+.personal{
+margin-bottom:50px;   /* reduced */
+}
+
+/* HAM RADIO */
+
+.hamradio{
+margin-bottom:50px;   /* reduced */
+}
+
+/* HAM BUTTONS */
+
+.ham-buttons{
+margin-top:15px;
+gap:12px;
+}
+
+}
